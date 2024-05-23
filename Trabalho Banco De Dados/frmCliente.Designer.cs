@@ -159,7 +159,7 @@
             this.mtxPhone.BackColor = System.Drawing.SystemColors.Control;
             this.mtxPhone.ForeColor = System.Drawing.Color.DarkBlue;
             this.mtxPhone.Location = new System.Drawing.Point(386, 224);
-            this.mtxPhone.Mask = "(99) 00000-0000";
+            this.mtxPhone.Mask = "(00) 00000-0000";
             this.mtxPhone.Name = "mtxPhone";
             this.mtxPhone.Size = new System.Drawing.Size(87, 20);
             this.mtxPhone.TabIndex = 64;
