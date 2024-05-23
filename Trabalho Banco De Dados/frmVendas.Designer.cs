@@ -67,7 +67,6 @@
             this.txtCombustivel = new System.Windows.Forms.TextBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.btcLimparCampos = new System.Windows.Forms.Button();
-            this.mtxDataVenda = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -75,6 +74,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtpVenda = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -343,7 +343,7 @@
             this.label4.BackColor = System.Drawing.Color.AliceBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(249, 304);
+            this.label4.Location = new System.Drawing.Point(249, 307);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 15);
             this.label4.TabIndex = 73;
@@ -480,15 +480,6 @@
             this.btcLimparCampos.UseVisualStyleBackColor = true;
             this.btcLimparCampos.Click += new System.EventHandler(this.btcLimparCampos_Click);
             // 
-            // mtxDataVenda
-            // 
-            this.mtxDataVenda.ForeColor = System.Drawing.Color.DarkBlue;
-            this.mtxDataVenda.Location = new System.Drawing.Point(313, 361);
-            this.mtxDataVenda.Mask = "99/99/9999";
-            this.mtxDataVenda.Name = "mtxDataVenda";
-            this.mtxDataVenda.Size = new System.Drawing.Size(67, 20);
-            this.mtxDataVenda.TabIndex = 86;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -533,7 +524,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(420, 2);
+            this.panel3.Location = new System.Drawing.Point(420, -1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(537, 25);
             this.panel3.TabIndex = 85;
@@ -542,9 +533,9 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
+            this.textBox2.Location = new System.Drawing.Point(4, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(960, 20);
+            this.textBox2.Size = new System.Drawing.Size(522, 20);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "Tabelas";
             // 
@@ -553,11 +544,23 @@
             this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -9);
+            this.pictureBox1.Location = new System.Drawing.Point(3, -13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(954, 488);
             this.pictureBox1.TabIndex = 90;
             this.pictureBox1.TabStop = false;
+            // 
+            // dtpVenda
+            // 
+            this.dtpVenda.CalendarForeColor = System.Drawing.Color.DarkBlue;
+            this.dtpVenda.CalendarTitleForeColor = System.Drawing.Color.DarkBlue;
+            this.dtpVenda.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dtpVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVenda.Location = new System.Drawing.Point(316, 360);
+            this.dtpVenda.Name = "dtpVenda";
+            this.dtpVenda.Size = new System.Drawing.Size(98, 20);
+            this.dtpVenda.TabIndex = 91;
+            this.dtpVenda.Value = new System.DateTime(2024, 5, 23, 19, 43, 2, 0);
             // 
             // frmVendas
             // 
@@ -565,10 +568,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(951, 464);
+            this.Controls.Add(this.dtpVenda);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.mtxDataVenda);
             this.Controls.Add(this.btcLimparCampos);
             this.Controls.Add(this.txtCombustivel);
             this.Controls.Add(this.txtAutomatico);
@@ -665,7 +668,6 @@
         private System.Windows.Forms.TextBox txtCombustivel;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Button btcLimparCampos;
-        private System.Windows.Forms.MaskedTextBox mtxDataVenda;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -673,5 +675,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dtpVenda;
     }
 }

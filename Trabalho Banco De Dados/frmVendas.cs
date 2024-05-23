@@ -228,7 +228,7 @@ namespace Trabalho_Banco_De_Dados
                 string.IsNullOrWhiteSpace(txtIdade.Text) ||
                 string.IsNullOrWhiteSpace(mtxCPF.Text) ||
                 string.IsNullOrWhiteSpace(txtAltura.Text) ||
-                string.IsNullOrWhiteSpace(mtxDataVenda.Text) ||
+                string.IsNullOrWhiteSpace(dtpVenda.Text) ||
                 string.IsNullOrWhiteSpace(mtxPhone.Text))
 
             {
@@ -285,7 +285,7 @@ namespace Trabalho_Banco_De_Dados
                     comm.Parameters.Add("@CPF", SqlDbType.NVarChar).Value = mtxCPF.Text;
                     comm.Parameters.Add("@Altura", SqlDbType.Decimal).Value = Convert.ToDecimal(txtAltura.Text);
                     comm.Parameters.Add("@Contato", SqlDbType.NVarChar).Value = mtxPhone.Text;
-                    comm.Parameters.Add("@DataVenda", SqlDbType.NVarChar).Value = mtxDataVenda.Text;
+                    comm.Parameters.Add("@DataVenda", SqlDbType.NVarChar).Value = dtpVenda.Text;
 
                     comm.ExecuteNonQuery();
 
@@ -374,7 +374,7 @@ namespace Trabalho_Banco_De_Dados
             txtAltura.Clear();
             mtxCPF.Clear();
             mtxPhone.Clear();
-            mtxDataVenda.Clear();
+            
 
 
 
