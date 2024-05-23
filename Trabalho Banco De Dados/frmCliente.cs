@@ -57,8 +57,7 @@ namespace Trabalho_Banco_De_Dados
         }
         private void GetCliente(int id)
         {
-            ToolStripStatusLabel2.Text = "Conectando...";
-            statusStrip2.Refresh();
+            
             try
             {
                 using (SqlConnection cn2 = new SqlConnection(Conn.StrCon))
@@ -69,9 +68,7 @@ namespace Trabalho_Banco_De_Dados
 
                     using (SqlCommand cmd2 = new SqlCommand(sql, cn2))
                     {
-                        ToolStripStatusLabel2.Text = "Buscando CLiente.";
-                        statusStrip2.Refresh();
-
+                      
                         using (SqlDataReader dr2 = cmd2.ExecuteReader())
                         {
                             if (dr2.HasRows)
@@ -91,16 +88,14 @@ namespace Trabalho_Banco_De_Dados
             }
             catch (Exception ex)
             {
-                ToolStripStatusLabel2.Text = "Falha";
-                statusStrip2.Refresh();
+                
                 MessageBox.Show("Falha ao buscar o Cliente!\n\n" + ex.Message);
             }
         }
 
         private void SalvarCliente()
         {
-            ToolStripStatusLabel2.Text = "Conectando...";
-            statusStrip2.Refresh();
+            
             if (CamposObrigatoriosPreenchidos())
             {
 
@@ -119,8 +114,7 @@ namespace Trabalho_Banco_De_Dados
 
                         using (SqlCommand cmd2 = new SqlCommand(sql, cn2))
                         {
-                            ToolStripStatusLabel2.Text = "Salvando o Cliente.";
-                            statusStrip2.Refresh();
+                            
 
                             cmd2.Parameters.AddWithValue("@NomeCli", txtNomeCli.Text);
                             cmd2.Parameters.AddWithValue("@Idade", txtIdade.Text);
@@ -130,14 +124,12 @@ namespace Trabalho_Banco_De_Dados
                             cmd2.ExecuteNonQuery();
                         }
 
-                        ToolStripStatusLabel2.Text = "Pronto";
-                        statusStrip2.Refresh();
+                        
                     }
                 }
                 catch (Exception ex)
                 {
-                    ToolStripStatusLabel2.Text = "Falha";
-                    statusStrip2.Refresh();
+                    
                     MessageBox.Show("Não foi possível salvar os dados!\n\n" + ex.Message);
                 }
             }

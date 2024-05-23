@@ -50,8 +50,7 @@ namespace Trabalho_Banco_De_Dados
         private void Buscar()
         {
             {
-                toolStripStatusLabel1.Text = "Procurando, Aguarde";
-                statusStrip1.Refresh();
+               
 
                 try
                 {
@@ -101,8 +100,7 @@ namespace Trabalho_Banco_De_Dados
                                 dataGridView1.DataSource = dt;
                             }
                         }
-                        toolStripStatusLabel1.Text = "Pronto";
-                        statusStrip1.Refresh();
+                       
                     }
                 }
                 catch (Exception ex)
@@ -119,7 +117,7 @@ namespace Trabalho_Banco_De_Dados
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "";
+            
             LoadData();
         }
         private void LoadData()
@@ -199,14 +197,21 @@ namespace Trabalho_Banco_De_Dados
             frm.ShowDialog();
         }
 
-        private void btnRecarregar_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
+       
 
         private void statusStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRecarregar_Click_1(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

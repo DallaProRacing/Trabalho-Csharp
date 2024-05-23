@@ -16,6 +16,8 @@ namespace Trabalho_Banco_De_Dados
         int id = 0;
         public FrmVeiculosAdicionar(int id)
         {
+            
+
             InitializeComponent();
             this.id = id;
 
@@ -72,8 +74,7 @@ namespace Trabalho_Banco_De_Dados
         }
         private void GetVeiculo(int id)
         {
-            ToolStripStatusLabel1.Text = "Conectando...";
-            statusStrip1.Refresh();
+            
             try
             {
                 using (SqlConnection cn = new SqlConnection(Conn.StrCon))
@@ -84,8 +85,7 @@ namespace Trabalho_Banco_De_Dados
 
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
-                        ToolStripStatusLabel1.Text = "Buscando veículo.";
-                        statusStrip1.Refresh();
+                        
 
                         using (SqlDataReader dr = cmd.ExecuteReader())
                         {
@@ -132,16 +132,14 @@ namespace Trabalho_Banco_De_Dados
             }
             catch (Exception ex)
             {
-                ToolStripStatusLabel1.Text = "Falha";
-                statusStrip1.Refresh();
+                
                 MessageBox.Show("Falha ao buscar o veículo!\n\n" + ex.Message);
             }
         }
 
         private void SalvarVeiculo()
         {
-            ToolStripStatusLabel1.Text = "Conectando...";
-            statusStrip1.Refresh();
+            
             if (CamposObrigatoriosPreenchidos())
             {
 
@@ -161,8 +159,7 @@ namespace Trabalho_Banco_De_Dados
 
                         using (SqlCommand cmd = new SqlCommand(sql, cn))
                         {
-                            ToolStripStatusLabel1.Text = "Salvando o veículo.";
-                            statusStrip1.Refresh();
+                            
 
                             cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
                             cmd.Parameters.AddWithValue("@Modelo", txtModelo.Text);
@@ -176,13 +173,12 @@ namespace Trabalho_Banco_De_Dados
                         }
 
                         
-                        statusStrip1.Refresh();
+                       
                     }
                 }
                 catch (Exception ex)
                 {
-                    ToolStripStatusLabel1.Text = "Falha";
-                    statusStrip1.Refresh();
+                    
                     MessageBox.Show("Não foi possível salvar os dados!\n\n" + ex.Message);
                 }
 
@@ -254,9 +250,7 @@ namespace Trabalho_Banco_De_Dados
         }
         
         private void ExcluirVeiculo()
-        {
-            ToolStripStatusLabel1.Text = "Conectanto...";
-            statusStrip1.Refresh();
+        {            
 
             try
             {
@@ -267,20 +261,17 @@ namespace Trabalho_Banco_De_Dados
                     var sql = "DELETE FROM tb_veiculos where id=" + id;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
-                        ToolStripStatusLabel1.Text = "Excluíndo o veículo.";
-                        statusStrip1.Refresh();
+                        
 
                         cmd.ExecuteNonQuery();
                     }
-                    ToolStripStatusLabel1.Text = "Pronto.";
-                    statusStrip1.Refresh();
+                    
                 }
 
             }
             catch (Exception ex)
             {
-                ToolStripStatusLabel1.Text = "Falha";
-                statusStrip1.Refresh();
+                
                 MessageBox.Show("Falha ao excluir o veículo!\n\n" + ex.Message);
             }
         }

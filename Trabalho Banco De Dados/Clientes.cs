@@ -38,8 +38,7 @@ namespace Trabalho_Banco_De_Dados
 
         private void Buscar()
         {
-            toolStripStatusLabel2.Text = "Procurando, Aguarde";
-            statusStrip2.Refresh();
+            
 
             try
             {
@@ -83,8 +82,7 @@ namespace Trabalho_Banco_De_Dados
                             dataGridView2.DataSource = dt2;
                         }
                     }
-                    toolStripStatusLabel2.Text = "Pronto";
-                    statusStrip2.Refresh();
+                    
                 }
             }
             catch (Exception ex)
@@ -114,7 +112,7 @@ namespace Trabalho_Banco_De_Dados
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = "";
+           
             LoadData();
         }
 

@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.btnBuscarC = new System.Windows.Forms.Button();
@@ -39,32 +38,18 @@
             this.btnAlterarC = new System.Windows.Forms.Button();
             this.btnAdicionarC = new System.Windows.Forms.Button();
             this.txtbuscarC = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.statusStrip2.SuspendLayout();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.toolStripContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // statusStrip2
-            // 
-            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel2});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 413);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(969, 22);
-            this.statusStrip2.TabIndex = 17;
-            this.statusStrip2.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(66, 17);
-            this.toolStripStatusLabel2.Text = "Mensagem";
             // 
             // dataGridView2
             // 
@@ -91,7 +76,8 @@
             // 
             // btnBuscarC
             // 
-            this.btnBuscarC.Location = new System.Drawing.Point(689, 12);
+            this.btnBuscarC.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnBuscarC.Location = new System.Drawing.Point(579, 12);
             this.btnBuscarC.Name = "btnBuscarC";
             this.btnBuscarC.Size = new System.Drawing.Size(118, 23);
             this.btnBuscarC.TabIndex = 14;
@@ -101,7 +87,8 @@
             // 
             // btnRecarregarC
             // 
-            this.btnRecarregarC.Location = new System.Drawing.Point(865, 12);
+            this.btnRecarregarC.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnRecarregarC.Location = new System.Drawing.Point(719, 12);
             this.btnRecarregarC.Name = "btnRecarregarC";
             this.btnRecarregarC.Size = new System.Drawing.Size(75, 23);
             this.btnRecarregarC.TabIndex = 24;
@@ -114,6 +101,7 @@
             this.cbxBuscarC.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbxBuscarC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBuscarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxBuscarC.ForeColor = System.Drawing.Color.DarkBlue;
             this.cbxBuscarC.FormattingEnabled = true;
             this.cbxBuscarC.Items.AddRange(new object[] {
             "NomeCli",
@@ -121,7 +109,7 @@
             "CPF",
             "Altura",
             "Contato"});
-            this.cbxBuscarC.Location = new System.Drawing.Point(363, 12);
+            this.cbxBuscarC.Location = new System.Drawing.Point(249, 12);
             this.cbxBuscarC.Name = "cbxBuscarC";
             this.cbxBuscarC.Size = new System.Drawing.Size(118, 23);
             this.cbxBuscarC.TabIndex = 21;
@@ -129,6 +117,7 @@
             // btnAlterarC
             // 
             this.btnAlterarC.BackColor = System.Drawing.Color.Yellow;
+            this.btnAlterarC.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnAlterarC.Location = new System.Drawing.Point(622, 387);
             this.btnAlterarC.Name = "btnAlterarC";
             this.btnAlterarC.Size = new System.Drawing.Size(75, 23);
@@ -140,6 +129,7 @@
             // btnAdicionarC
             // 
             this.btnAdicionarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAdicionarC.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnAdicionarC.Location = new System.Drawing.Point(719, 387);
             this.btnAdicionarC.Name = "btnAdicionarC";
             this.btnAdicionarC.Size = new System.Drawing.Size(75, 23);
@@ -153,21 +143,11 @@
             this.txtbuscarC.AccessibleDescription = "";
             this.txtbuscarC.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtbuscarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbuscarC.Location = new System.Drawing.Point(487, 12);
+            this.txtbuscarC.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtbuscarC.Location = new System.Drawing.Point(373, 12);
             this.txtbuscarC.Name = "txtbuscarC";
             this.txtbuscarC.Size = new System.Drawing.Size(196, 23);
             this.txtbuscarC.TabIndex = 18;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(21, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(919, 23);
-            this.textBox2.TabIndex = 22;
-            this.textBox2.Text = "                                                                                 " +
-    "         Filtrar por:";
             // 
             // imageList1
             // 
@@ -187,23 +167,52 @@
             this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox1
+            // textBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(919, 340);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.textBox1.Location = new System.Drawing.Point(3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(954, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Clientes";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 410);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(969, 25);
+            this.panel2.TabIndex = 90;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-233, -139);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1199, 574);
+            this.pictureBox2.TabIndex = 91;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.textBox2.Location = new System.Drawing.Point(153, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(641, 23);
+            this.textBox2.TabIndex = 22;
+            this.textBox2.Text = "     Filtrar por:";
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 435);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.btnBuscarC);
             this.Controls.Add(this.btnRecarregarC);
@@ -212,25 +221,23 @@
             this.Controls.Add(this.btnAdicionarC);
             this.Controls.Add(this.txtbuscarC);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
-            this.statusStrip2.ResumeLayout(false);
-            this.statusStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip statusStrip2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Button btnBuscarC;
@@ -239,10 +246,12 @@
         private System.Windows.Forms.Button btnAlterarC;
         private System.Windows.Forms.Button btnAdicionarC;
         private System.Windows.Forms.TextBox txtbuscarC;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

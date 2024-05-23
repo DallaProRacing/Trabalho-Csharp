@@ -63,8 +63,8 @@ namespace Trabalho_Banco_De_Dados
         private void GerarNotaVenda(DataGridViewRow selectedRow)
         {
 
-            string nomeCliente = selectedRow.Cells["NomeCli"].Value.ToString();
-            string filePath = $@"D:\Documents\FACULDADE URI\TERCEITO_ SEMESTRE\BANCO DE DADOS\NotaVenda_{nomeCliente}.pdf";
+            string Id_venda = selectedRow.Cells["Id_Venda"].Value.ToString();
+            string filePath = $@"D:\Documents\FACULDADE URI\TERCEITO_ SEMESTRE\Notas Vendas projeto c#\NotaVenda_{Id_venda}.pdf";
             Document doc = new Document();
             PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
             doc.Open();
@@ -95,7 +95,7 @@ namespace Trabalho_Banco_De_Dados
 
             // Cabeçalho da Nota de Venda
             
-            Paragraph header = new Paragraph("Nota de Venda");
+            Paragraph header = new Paragraph("");
             header.Alignment = Element.ALIGN_CENTER;
             doc.Add(header);
 
@@ -129,7 +129,7 @@ namespace Trabalho_Banco_De_Dados
                 doc.Add(Chunk.NEWLINE);
             }
             // Dados da Venda
-            doc.Add(new Paragraph("Detalhes da Venda:"));
+            doc.Add(new Paragraph("Detalhes do veículo vendido:"));
 
 
             PdfPTable table = new PdfPTable(9); // Ajustar o número de colunas conforme necessário
