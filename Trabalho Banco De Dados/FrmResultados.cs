@@ -192,6 +192,84 @@ namespace Trabalho_Banco_De_Dados
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            ValidarBuscar();
+            Buscar();
+        }
+
+        private bool ValidarBuscar()
+        {
+            if (cbxFiltro.Text == "")
+            {
+                MessageBox.Show("Selecione o campo a pesquisar!");
+                cbxFiltro.Focus();
+                return false;
+            }
+            else if (txtFiltro.Text == "")
+            {
+                MessageBox.Show("Campo buscar é Obrigatorio!");
+                txtFiltro.Focus();
+                return false;
+            }
+            return true;
+
+        }
+        private void Buscar()
+        {
+            {
+
+
+                try
+                {
+                    using (SqlConnection cn = new SqlConnection(Conn.StrCon))
+                    {
+                        cn.Open();
+
+                        var sqlQuery = "SELECT * FROM Vendas where ";
+
+                        switch (cbxFiltro.Text)
+                        {
+                            case "NomeVeiculo":
+                                sqlQuery += "Nome like '%" + txtFiltro.Text + "%'";
+                                break;
+
+                            case "NomeCliente":
+                                sqlQuery += "NomeCli like '%" + txtFiltro.Text + "%'";
+                                break;
+
+                            case "DataVenda":
+                                sqlQuery += "DataVenda like '%" + txtFiltro.Text + "%'";
+                                break;
+
+
+
+                        }
+                        sqlQuery += "Order By Nome";
+
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
+                        {
+                            using (DataTable dt = new DataTable())
+                            {
+                                da.Fill(dt);
+                                dataGridViewVendas.DataSource = dt;
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Falha ao tentar conectar\n\n" + ex.Message);
+                }
+            }
+        }
+
+
     }
 }
 

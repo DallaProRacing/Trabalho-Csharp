@@ -608,6 +608,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "frmVendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVendas";
