@@ -267,10 +267,10 @@ namespace Trabalho_Banco_De_Dados
                 {
                     conn.Open();
 
-                    comm = new SqlCommand("INSERT INTO Vendas (Id, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, Idade, CPF, Altura, Contato, DataVenda) " +
-                        "VALUES (@Id, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @Idade, @CPF, @Altura, @Contato, @DataVenda)", conn);
+                    comm = new SqlCommand("INSERT INTO Vendas (Id_Veiculo, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, Idade, CPF, Altura, Contato, DataVenda) " +
+                        "VALUES (@Id_Veiculo, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @Idade, @CPF, @Altura, @Contato, @DataVenda)", conn);
 
-                    comm.Parameters.Add("@Id", SqlDbType.NVarChar).Value = txtIdVeiculo.Text;
+                    comm.Parameters.Add("@Id_Veiculo", SqlDbType.NVarChar).Value = txtIdVeiculo.Text;
                     comm.Parameters.Add("@Nome", SqlDbType.NVarChar).Value = txtNome.Text;
                     comm.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = txtModelo.Text;
                     comm.Parameters.Add("@Ano", SqlDbType.Int).Value = Convert.ToInt32(txtAno.Text);
