@@ -51,6 +51,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbxSituacao = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -307,10 +309,38 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.AliceBlue;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label19.Location = new System.Drawing.Point(295, 272);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(55, 15);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Situação";
+            // 
+            // cbxSituacao
+            // 
+            this.cbxSituacao.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cbxSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSituacao.ForeColor = System.Drawing.Color.DarkBlue;
+            this.cbxSituacao.FormattingEnabled = true;
+            this.cbxSituacao.Items.AddRange(new object[] {
+            "À venda",
+            "Vendido"});
+            this.cbxSituacao.Location = new System.Drawing.Point(356, 272);
+            this.cbxSituacao.Name = "cbxSituacao";
+            this.cbxSituacao.Size = new System.Drawing.Size(84, 21);
+            this.cbxSituacao.TabIndex = 25;
+            // 
             // FrmVeiculosAdicionar
             // 
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(969, 435);
+            this.Controls.Add(this.cbxSituacao);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label16);
@@ -387,5 +417,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cbxSituacao;
     }
 }

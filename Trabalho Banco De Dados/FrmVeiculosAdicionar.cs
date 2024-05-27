@@ -98,6 +98,7 @@ namespace Trabalho_Banco_De_Dados
                                     txtAno.Text = dr["Ano"].ToString();
                                     txtFabricacao.Text = dr["Fabricacao"].ToString();
                                     txtCor.Text = dr["Cor"].ToString();
+                                    
 
                                     switch (Convert.ToInt32(dr["Combustivel"]))
                                     {
@@ -124,6 +125,7 @@ namespace Trabalho_Banco_De_Dados
                                         cbxAutomatico.Text = "Não";
 
                                     txtValor.Text = dr["Valor"].ToString();
+                                    txtValor.Text = dr["Situacao"].ToString();
                                 }
                             }
                         }
@@ -151,11 +153,11 @@ namespace Trabalho_Banco_De_Dados
 
                         var sql = "";
                         if (this.id == 0)
-                            sql = "INSERT INTO tb_Veiculos (Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor)" +
-                                " VALUES  (@Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor)";
+                            sql = "INSERT INTO tb_Veiculos (Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, Situacao)" +
+                                " VALUES  (@Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @Situacao)";
                         else
                             sql = "UPDATE tb_Veiculos Set Nome=@Nome, Modelo=@Modelo, Ano=@Ano, Fabricacao=@Fabricacao, Cor=@Cor, " +
-                                "Combustivel=@Combustivel, Automatico=@Automatico, Valor=@Valor WHERE id=" + this.id;
+                                "Combustivel=@Combustivel, Automatico=@Automatico, Valor=@Valor, Situacao=@Situacao WHERE id=" + this.id;
 
                         using (SqlCommand cmd = new SqlCommand(sql, cn))
                         {
@@ -169,6 +171,7 @@ namespace Trabalho_Banco_De_Dados
                             cmd.Parameters.AddWithValue("@Combustivel", cbxCombustivel.Text.Substring(0, 1));
                             cmd.Parameters.AddWithValue("@Automatico", cbxAutomatico.Text.Substring(0, 1) == "S" ? 1 : 0);
                             cmd.Parameters.AddWithValue("@Valor", txtValor.Text.Replace(",", "."));
+                            cmd.Parameters.AddWithValue("@Situacao", cbxSituacao.Text);
                             cmd.ExecuteNonQuery();
                         }
 

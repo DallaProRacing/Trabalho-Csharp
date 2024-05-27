@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\conn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:conn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\conn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:conn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 355,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,26 +58,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Conn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\Conn.cs",
-              "RelativeDocumentMoniker": "Conn.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\Conn.cs",
-              "RelativeToolTip": "Conn.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "frmCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmCliente.cs",
+              "RelativeDocumentMoniker": "frmCliente.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmCliente.cs",
+              "RelativeToolTip": "frmCliente.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAuwCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:02:51.481Z",
+              "WhenOpened": "2024-05-27T23:25:28.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmVeiculosAdicionar.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs",
+              "RelativeDocumentMoniker": "FrmVeiculosAdicionar.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs",
+              "RelativeToolTip": "FrmVeiculosAdicionar.cs",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAQwGQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:42:00.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FrmVeiculosAdicionar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs",
+              "RelativeDocumentMoniker": "FrmVeiculosAdicionar.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs [Design]",
+              "RelativeToolTip": "FrmVeiculosAdicionar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:40:27.541Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmVendas.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs",
               "RelativeDocumentMoniker": "frmVendas.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs",
-              "RelativeToolTip": "frmVendas.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAwwG0AAAANAAAA",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs*",
+              "RelativeToolTip": "frmVendas.cs*",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAYwHkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T23:52:44.192Z",
               "EditorCaption": ""
@@ -76,11 +113,24 @@
               "Title": "frmVendas.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs",
               "RelativeDocumentMoniker": "frmVendas.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs [Design]",
-              "RelativeToolTip": "frmVendas.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmVendas.cs [Design]*",
+              "RelativeToolTip": "frmVendas.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T23:52:42.645Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Conn.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\Conn.cs",
+              "RelativeDocumentMoniker": "Conn.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\Conn.cs",
+              "RelativeToolTip": "Conn.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T01:02:51.481Z",
+              "EditorCaption": ""
             }
           ]
         },

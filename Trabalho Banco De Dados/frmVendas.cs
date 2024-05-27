@@ -119,7 +119,7 @@ namespace Trabalho_Banco_De_Dados
 
             conn = new SqlConnection(Conn.StrCon);
 
-            comm = new SqlCommand("SELECT NomeCli,Idade,CPF,Altura,Contato FROM Clientes WHERE ID_Cliente = @ID_Cliente", conn);
+            comm = new SqlCommand("SELECT NomeCli,CPF,Altura,Contato FROM Clientes WHERE ID_Cliente = @ID_Cliente", conn);
 
             comm.Parameters.Add("@ID_Cliente", System.Data.SqlDbType.Int);
             comm.Parameters["@ID_Cliente"].Value = Convert.ToInt32(txtIdCliente.Text);
@@ -144,8 +144,7 @@ namespace Trabalho_Banco_De_Dados
                         reader = comm.ExecuteReader();
                         if (reader.Read())
                         {
-                            txtNomeCli.Text = reader["NomeCli"].ToString();
-                            txtIdade.Text = reader["Idade"].ToString();
+                            txtNomeCli.Text = reader["NomeCli"].ToString();                          
                             mtxCPF.Text = reader["CPF"].ToString();
                             txtAltura.Text = reader["Altura"].ToString();
                             mtxPhone.Text = reader["Contato"].ToString();
@@ -224,8 +223,7 @@ namespace Trabalho_Banco_De_Dados
                 string.IsNullOrWhiteSpace(txtAutomatico.Text) ||
                 string.IsNullOrWhiteSpace(txtCombustivel.Text) ||
                 string.IsNullOrWhiteSpace(txtValor.Text) ||
-                string.IsNullOrWhiteSpace(txtNomeCli.Text) ||
-                string.IsNullOrWhiteSpace(txtIdade.Text) ||
+                string.IsNullOrWhiteSpace(txtNomeCli.Text) ||               
                 string.IsNullOrWhiteSpace(mtxCPF.Text) ||
                 string.IsNullOrWhiteSpace(txtAltura.Text) ||
                 string.IsNullOrWhiteSpace(dtpVenda.Text) ||
@@ -267,8 +265,8 @@ namespace Trabalho_Banco_De_Dados
                 {
                     conn.Open();
 
-                    comm = new SqlCommand("INSERT INTO Vendas (Id_Veiculo, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, Idade, CPF, Altura, Contato, DataVenda) " +
-                        "VALUES (@Id_Veiculo, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @Idade, @CPF, @Altura, @Contato, @DataVenda)", conn);
+                    comm = new SqlCommand("INSERT INTO Vendas (Id_Veiculo, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, CPF, Altura, Contato, DataVenda) " +
+                        "VALUES (@Id_Veiculo, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @CPF, @Altura, @Contato, @DataVenda)", conn);
 
                     comm.Parameters.Add("@Id_Veiculo", SqlDbType.NVarChar).Value = txtIdVeiculo.Text;
                     comm.Parameters.Add("@Nome", SqlDbType.NVarChar).Value = txtNome.Text;
@@ -280,8 +278,7 @@ namespace Trabalho_Banco_De_Dados
                     comm.Parameters.Add("@Automatico", SqlDbType.Bit).Value = Convert.ToBoolean(txtAutomatico.Text);
                     comm.Parameters.Add("@Valor", SqlDbType.Decimal).Value = Convert.ToDecimal(txtValor.Text);
                     comm.Parameters.Add("@ID_Cliente", SqlDbType.Int).Value = Convert.ToInt32(txtIdCliente.Text);
-                    comm.Parameters.Add("@NomeCli", SqlDbType.NVarChar).Value = txtNomeCli.Text;
-                    comm.Parameters.Add("@Idade", SqlDbType.Int).Value = Convert.ToInt32(txtIdade.Text);
+                    comm.Parameters.Add("@NomeCli", SqlDbType.NVarChar).Value = txtNomeCli.Text;                   
                     comm.Parameters.Add("@CPF", SqlDbType.NVarChar).Value = mtxCPF.Text;
                     comm.Parameters.Add("@Altura", SqlDbType.Decimal).Value = Convert.ToDecimal(txtAltura.Text);
                     comm.Parameters.Add("@Contato", SqlDbType.NVarChar).Value = mtxPhone.Text;
@@ -368,8 +365,7 @@ namespace Trabalho_Banco_De_Dados
             txtCombustivel.Clear();
             txtAutomatico.Clear();
             txtValor.Clear();
-            txtIdCliente.Clear();
-            txtIdade.Clear();
+            txtIdCliente.Clear();            
             txtNomeCli.Clear();
             txtAltura.Clear();
             mtxCPF.Clear();

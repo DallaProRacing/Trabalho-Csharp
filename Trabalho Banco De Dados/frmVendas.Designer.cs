@@ -54,8 +54,6 @@
             this.mtxPhone = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIdade = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNomeCli = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -302,7 +300,7 @@
             // mtxCPF
             // 
             this.mtxCPF.ForeColor = System.Drawing.Color.DarkBlue;
-            this.mtxCPF.Location = new System.Drawing.Point(115, 334);
+            this.mtxCPF.Location = new System.Drawing.Point(115, 308);
             this.mtxCPF.Mask = "000.000.000-00";
             this.mtxCPF.Name = "mtxCPF";
             this.mtxCPF.Size = new System.Drawing.Size(87, 20);
@@ -311,7 +309,7 @@
             // txtAltura
             // 
             this.txtAltura.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtAltura.Location = new System.Drawing.Point(334, 305);
+            this.txtAltura.Location = new System.Drawing.Point(334, 306);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(66, 20);
             this.txtAltura.TabIndex = 76;
@@ -319,7 +317,7 @@
             // mtxPhone
             // 
             this.mtxPhone.ForeColor = System.Drawing.Color.DarkBlue;
-            this.mtxPhone.Location = new System.Drawing.Point(115, 360);
+            this.mtxPhone.Location = new System.Drawing.Point(115, 352);
             this.mtxPhone.Mask = "(99) 00000-0000";
             this.mtxPhone.Name = "mtxPhone";
             this.mtxPhone.Size = new System.Drawing.Size(87, 20);
@@ -331,7 +329,7 @@
             this.label3.BackColor = System.Drawing.Color.AliceBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(55, 361);
+            this.label3.Location = new System.Drawing.Point(55, 353);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 74;
@@ -343,32 +341,11 @@
             this.label4.BackColor = System.Drawing.Color.AliceBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(249, 307);
+            this.label4.Location = new System.Drawing.Point(249, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 15);
             this.label4.TabIndex = 73;
             this.label4.Text = "Altura em cm";
-            // 
-            // txtIdade
-            // 
-            this.txtIdade.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtIdade.Location = new System.Drawing.Point(115, 304);
-            this.txtIdade.MaxLength = 50;
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(87, 20);
-            this.txtIdade.TabIndex = 72;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.AliceBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(74, 304);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "Idade";
             // 
             // label7
             // 
@@ -397,7 +374,7 @@
             this.label6.BackColor = System.Drawing.Color.AliceBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(74, 335);
+            this.label6.Location = new System.Drawing.Point(79, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 15);
             this.label6.TabIndex = 68;
@@ -428,7 +405,7 @@
             // btnRegistrarVenda
             // 
             this.btnRegistrarVenda.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrarVenda.Location = new System.Drawing.Point(131, 404);
+            this.btnRegistrarVenda.Location = new System.Drawing.Point(131, 396);
             this.btnRegistrarVenda.Name = "btnRegistrarVenda";
             this.btnRegistrarVenda.Size = new System.Drawing.Size(94, 20);
             this.btnRegistrarVenda.TabIndex = 80;
@@ -472,7 +449,7 @@
             // btcLimparCampos
             // 
             this.btcLimparCampos.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btcLimparCampos.Location = new System.Drawing.Point(252, 404);
+            this.btcLimparCampos.Location = new System.Drawing.Point(252, 396);
             this.btcLimparCampos.Name = "btcLimparCampos";
             this.btcLimparCampos.Size = new System.Drawing.Size(94, 20);
             this.btcLimparCampos.TabIndex = 85;
@@ -486,7 +463,7 @@
             this.label8.BackColor = System.Drawing.Color.AliceBlue;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(222, 361);
+            this.label8.Location = new System.Drawing.Point(222, 353);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 15);
             this.label8.TabIndex = 87;
@@ -556,7 +533,7 @@
             this.dtpVenda.CalendarTitleForeColor = System.Drawing.Color.DarkBlue;
             this.dtpVenda.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dtpVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVenda.Location = new System.Drawing.Point(316, 360);
+            this.dtpVenda.Location = new System.Drawing.Point(316, 352);
             this.dtpVenda.Name = "dtpVenda";
             this.dtpVenda.Size = new System.Drawing.Size(98, 20);
             this.dtpVenda.TabIndex = 91;
@@ -584,8 +561,6 @@
             this.Controls.Add(this.mtxPhone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtIdade);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNomeCli);
             this.Controls.Add(this.label6);
@@ -655,8 +630,6 @@
         private System.Windows.Forms.MaskedTextBox mtxPhone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomeCli;
         private System.Windows.Forms.Label label6;

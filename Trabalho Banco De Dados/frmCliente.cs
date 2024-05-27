@@ -35,8 +35,7 @@ namespace Trabalho_Banco_De_Dados
         private void TravarControles()
         {
             txtNomeCli.Enabled = false;
-            mtxCPF.Enabled = false;
-            txtIdade.Enabled = false;
+            mtxCPF.Enabled = false;           
             txtAltura.Enabled = false;
             mtxPhone.Enabled = false;
 
@@ -44,8 +43,7 @@ namespace Trabalho_Banco_De_Dados
 
         private bool CamposObrigatoriosPreenchidos()
         {
-            if (string.IsNullOrWhiteSpace(txtAltura.Text) ||
-                string.IsNullOrWhiteSpace(txtIdade.Text) ||
+            if (string.IsNullOrWhiteSpace(txtAltura.Text) ||               
                 string.IsNullOrWhiteSpace(txtNomeCli.Text) ||
                 string.IsNullOrWhiteSpace(mtxCPF.Text) ||
                 string.IsNullOrWhiteSpace(mtxPhone.Text))
@@ -75,8 +73,7 @@ namespace Trabalho_Banco_De_Dados
                             {
                                 if (dr2.Read())
                                 {
-                                    txtNomeCli.Text = dr2["NomeCli"].ToString();
-                                    txtIdade.Text = dr2["Idade"].ToString();
+                                    txtNomeCli.Text = dr2["NomeCli"].ToString();                                    
                                     mtxCPF.Text = dr2["CPF"].ToString();
                                     txtAltura.Text = dr2["Altura"].ToString();
                                     mtxPhone.Text = dr2["Contato"].ToString();
@@ -107,17 +104,16 @@ namespace Trabalho_Banco_De_Dados
 
                         var sql = "";
                         if (this.id == 0)
-                            sql = "INSERT INTO Clientes (NomeCli, Idade, CPF, Altura, Contato)" +
-                                " VALUES  (@NomeCli, @Idade, @CPF, @Altura, @Contato)";
+                            sql = "INSERT INTO Clientes (NomeCli,CPF, Altura, Contato)" +
+                                " VALUES  (@NomeCli,  @CPF, @Altura, @Contato)";
                         else
-                            sql = "UPDATE Clientes Set NomeCli=@NomeCli, Idade=@Idade, CPF=@CPF, Altura=@Altura,Contato=@Contato WHERE ID_Cliente=" + this.id;
+                            sql = "UPDATE Clientes Set NomeCli=@NomeCli, CPF=@CPF, Altura=@Altura,Contato=@Contato WHERE ID_Cliente=" + this.id;
 
                         using (SqlCommand cmd2 = new SqlCommand(sql, cn2))
                         {
                             
 
                             cmd2.Parameters.AddWithValue("@NomeCli", txtNomeCli.Text);
-                            cmd2.Parameters.AddWithValue("@Idade", txtIdade.Text);
                             cmd2.Parameters.AddWithValue("@CPF", mtxCPF.Text);
                             cmd2.Parameters.AddWithValue("@Altura", txtAltura.Text);
                             cmd2.Parameters.AddWithValue("@Contato", mtxPhone.Text);
