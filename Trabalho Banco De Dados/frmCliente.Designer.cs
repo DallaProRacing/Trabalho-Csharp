@@ -212,6 +212,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.panel2.ResumeLayout(false);
