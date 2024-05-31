@@ -87,7 +87,10 @@ namespace Trabalho_Banco_De_Dados
                                 sqlQuery += "Valor >=" + txtbuscar.Text;
                                 break;
 
-                                
+                            case "Situacao":
+                                sqlQuery += "Situacao like '%" + txtbuscar.Text + "%'";
+                                break;
+
                         }
                         sqlQuery += "Order By Nome";
 

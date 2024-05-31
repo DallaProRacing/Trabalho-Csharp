@@ -52,6 +52,7 @@ namespace Trabalho_Banco_De_Dados
             }
         }
 
+        
         private void button3_Click(object sender, EventArgs e)
         {
             frmVendas frmVendas = new frmVendas();

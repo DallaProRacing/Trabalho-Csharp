@@ -64,7 +64,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(100, 150);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(150, 150);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 260);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -133,7 +133,8 @@
             "Ano",
             "Fabricacao",
             "Cor",
-            "Valor"});
+            "Valor",
+            "Situacao"});
             this.cbxBuscar.Location = new System.Drawing.Point(354, 12);
             this.cbxBuscar.Name = "cbxBuscar";
             this.cbxBuscar.Size = new System.Drawing.Size(118, 23);

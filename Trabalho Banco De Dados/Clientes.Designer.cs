@@ -56,10 +56,10 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(153, 41);
+            this.dataGridView2.Location = new System.Drawing.Point(195, 41);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(641, 340);
+            this.dataGridView2.Size = new System.Drawing.Size(569, 340);
             this.dataGridView2.TabIndex = 16;
             // 
             // toolStripContainer1
@@ -105,7 +105,6 @@
             this.cbxBuscarC.FormattingEnabled = true;
             this.cbxBuscarC.Items.AddRange(new object[] {
             "NomeCli",
-            "Idade",
             "CPF",
             "Altura",
             "Contato"});
@@ -118,7 +117,7 @@
             // 
             this.btnAlterarC.BackColor = System.Drawing.Color.Yellow;
             this.btnAlterarC.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnAlterarC.Location = new System.Drawing.Point(622, 387);
+            this.btnAlterarC.Location = new System.Drawing.Point(608, 383);
             this.btnAlterarC.Name = "btnAlterarC";
             this.btnAlterarC.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarC.TabIndex = 20;
@@ -130,7 +129,7 @@
             // 
             this.btnAdicionarC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAdicionarC.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnAdicionarC.Location = new System.Drawing.Point(719, 387);
+            this.btnAdicionarC.Location = new System.Drawing.Point(689, 383);
             this.btnAdicionarC.Name = "btnAdicionarC";
             this.btnAdicionarC.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionarC.TabIndex = 19;

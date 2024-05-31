@@ -125,7 +125,7 @@ namespace Trabalho_Banco_De_Dados
                                         cbxAutomatico.Text = "Não";
 
                                     txtValor.Text = dr["Valor"].ToString();
-                                    txtValor.Text = dr["Situacao"].ToString();
+                                    cbxSituacao.Text = dr["Situacao"].ToString();
                                 }
                             }
                         }

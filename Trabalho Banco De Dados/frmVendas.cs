@@ -196,6 +196,7 @@ namespace Trabalho_Banco_De_Dados
                 MessageBox.Show("Por favor, preencha o campo obrigatório.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
             return true;
         }
 
@@ -235,59 +236,50 @@ namespace Trabalho_Banco_De_Dados
             }
             return true;
         }
-        private void ExcluirVeiculo()
-        {
-            try
-            {
-                using (SqlConnection cn = new SqlConnection(Conn.StrCon))
-                {
-                    cn.Open();
 
-                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM tb_Veiculos WHERE Id = @Id", cn);
-                    deleteCommand.Parameters.AddWithValue("@Id", Convert.ToInt32(txtIdVeiculo.Text));
-
-                    deleteCommand.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha ao excluir o veículo!\n\n" + ex.Message);
-            }
-        }
         private void VenderVeiculo()
         {
             if (CamposObrigatoriosPreenchidos())
             {
                 SqlConnection conn = new SqlConnection(Conn.StrCon);
-                SqlCommand comm = new SqlCommand();
+                SqlCommand commInsert = new SqlCommand();
+                SqlCommand commUpdate = new SqlCommand();
 
                 try
                 {
                     conn.Open();
 
-                    comm = new SqlCommand("INSERT INTO Vendas (Id_Veiculo, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, CPF, Altura, Contato, DataVenda) " +
-                        "VALUES (@Id_Veiculo, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @CPF, @Altura, @Contato, @DataVenda)", conn);
+                    SqlTransaction transaction = conn.BeginTransaction();
 
-                    comm.Parameters.Add("@Id_Veiculo", SqlDbType.NVarChar).Value = txtIdVeiculo.Text;
-                    comm.Parameters.Add("@Nome", SqlDbType.NVarChar).Value = txtNome.Text;
-                    comm.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = txtModelo.Text;
-                    comm.Parameters.Add("@Ano", SqlDbType.Int).Value = Convert.ToInt32(txtAno.Text);
-                    comm.Parameters.Add("@Fabricacao", SqlDbType.Int).Value = Convert.ToInt32(txtFabricacao.Text);
-                    comm.Parameters.Add("@Cor", SqlDbType.NVarChar).Value = txtCor.Text;
-                    comm.Parameters.Add("@Combustivel", SqlDbType.NVarChar).Value = txtCombustivel.Text;
-                    comm.Parameters.Add("@Automatico", SqlDbType.Bit).Value = Convert.ToBoolean(txtAutomatico.Text);
-                    comm.Parameters.Add("@Valor", SqlDbType.Decimal).Value = Convert.ToDecimal(txtValor.Text);
-                    comm.Parameters.Add("@ID_Cliente", SqlDbType.Int).Value = Convert.ToInt32(txtIdCliente.Text);
-                    comm.Parameters.Add("@NomeCli", SqlDbType.NVarChar).Value = txtNomeCli.Text;                   
-                    comm.Parameters.Add("@CPF", SqlDbType.NVarChar).Value = mtxCPF.Text;
-                    comm.Parameters.Add("@Altura", SqlDbType.Decimal).Value = Convert.ToDecimal(txtAltura.Text);
-                    comm.Parameters.Add("@Contato", SqlDbType.NVarChar).Value = mtxPhone.Text;
-                    comm.Parameters.Add("@DataVenda", SqlDbType.NVarChar).Value = dtpVenda.Text;
+                    commInsert = new SqlCommand("INSERT INTO Vendas (Id_Veiculo, Nome, Modelo, Ano, Fabricacao, Cor, Combustivel, Automatico, Valor, ID_Cliente, NomeCli, CPF, Altura, Contato, DataVenda) " +
+                        "VALUES (@Id_Veiculo, @Nome, @Modelo, @Ano, @Fabricacao, @Cor, @Combustivel, @Automatico, @Valor, @ID_Cliente, @NomeCli, @CPF, @Altura, @Contato, @DataVenda)", conn, transaction);
 
-                    comm.ExecuteNonQuery();
+                    commInsert.Parameters.Add("@Id_Veiculo", SqlDbType.NVarChar).Value = txtIdVeiculo.Text;
+                    commInsert.Parameters.Add("@Nome", SqlDbType.NVarChar).Value = txtNome.Text;
+                    commInsert.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = txtModelo.Text;
+                    commInsert.Parameters.Add("@Ano", SqlDbType.Int).Value = Convert.ToInt32(txtAno.Text);
+                    commInsert.Parameters.Add("@Fabricacao", SqlDbType.Int).Value = Convert.ToInt32(txtFabricacao.Text);
+                    commInsert.Parameters.Add("@Cor", SqlDbType.NVarChar).Value = txtCor.Text;
+                    commInsert.Parameters.Add("@Combustivel", SqlDbType.NVarChar).Value = txtCombustivel.Text;
+                    commInsert.Parameters.Add("@Automatico", SqlDbType.Bit).Value = Convert.ToBoolean(txtAutomatico.Text);
+                    commInsert.Parameters.Add("@Valor", SqlDbType.Decimal).Value = Convert.ToDecimal(txtValor.Text);
+                    commInsert.Parameters.Add("@ID_Cliente", SqlDbType.Int).Value = Convert.ToInt32(txtIdCliente.Text);
+                    commInsert.Parameters.Add("@NomeCli", SqlDbType.NVarChar).Value = txtNomeCli.Text;
+                    commInsert.Parameters.Add("@CPF", SqlDbType.NVarChar).Value = mtxCPF.Text;
+                    commInsert.Parameters.Add("@Altura", SqlDbType.Decimal).Value = Convert.ToDecimal(txtAltura.Text);
+                    commInsert.Parameters.Add("@Contato", SqlDbType.NVarChar).Value = mtxPhone.Text;
+                    commInsert.Parameters.Add("@DataVenda", SqlDbType.NVarChar).Value = dtpVenda.Text;
+
+                    commInsert.ExecuteNonQuery();
+
+                    commUpdate = new SqlCommand("UPDATE tb_Veiculos SET Situacao = 'Vendido' WHERE Id = @Id", conn, transaction);
+                    commUpdate.Parameters.Add("@Id", SqlDbType.Int).Value = Convert.ToInt32(txtIdVeiculo.Text);
+                    commUpdate.ExecuteNonQuery();
+
+                    transaction.Commit();
 
                     MessageBox.Show("Venda registrada com sucesso!", "Registro de Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ExcluirVeiculo();
+
                 }
                 catch (Exception ex)
                 {
@@ -299,6 +291,7 @@ namespace Trabalho_Banco_De_Dados
                 }
             }
         }
+
         private void btnRegistrarVenda_Click(object sender, EventArgs e)
         {
             VenderVeiculo();           
@@ -312,7 +305,8 @@ namespace Trabalho_Banco_De_Dados
             using (SqlConnection cn = new SqlConnection(Conn.StrCon))
             {
                 cn.Open();
-                string query = "SELECT * FROM tb_veiculos";
+                // Alterando a consulta SQL para filtrar apenas veículos "À venda"
+                string query = "SELECT * FROM tb_veiculos WHERE Situacao = 'À venda'";
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
                 SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);

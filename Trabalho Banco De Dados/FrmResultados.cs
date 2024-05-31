@@ -51,13 +51,20 @@ namespace Trabalho_Banco_De_Dados
         
         private void button1_Click_1(object sender, EventArgs e)
         {
+
             if (selectedRow == null)
             {
                 MessageBox.Show("Por favor, selecione uma linha para gerar a nota de venda.");
                 return;
             }
 
-            GerarNotaVenda(selectedRow);
+            DialogResult resp = MessageBox.Show("Deseja mesmo gerar uma nota?", "Sair",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resp == DialogResult.Yes)
+            {
+                GerarNotaVenda(selectedRow);
+            }
         }
 
         private void GerarNotaVenda(DataGridViewRow selectedRow)
@@ -85,8 +92,7 @@ namespace Trabalho_Banco_De_Dados
 
             
             string dataVenda = selectedRow.Cells["DataVenda"].Value.ToString();
-            string nomeCliente1 = selectedRow.Cells["NomeCli"].Value.ToString();
-            string idadeCliente = selectedRow.Cells["Idade"].Value.ToString();
+            string nomeCliente1 = selectedRow.Cells["NomeCli"].Value.ToString();          
             string cpfCliente = selectedRow.Cells["CPF"].Value.ToString();
             string alturaCliente = selectedRow.Cells["Altura"].Value.ToString();
             string contatoCliente = selectedRow.Cells["Contato"].Value.ToString();
@@ -108,10 +114,7 @@ namespace Trabalho_Banco_De_Dados
             cliente.Alignment = Element.ALIGN_CENTER;
             doc.Add(cliente);
 
-            Paragraph idade = new Paragraph($"Idade: {idadeCliente}");
-            idade.Alignment = Element.ALIGN_CENTER;
-            doc.Add(idade);
-
+           
             Paragraph cpf = new Paragraph($"CPF: {cpfCliente}");
             cpf.Alignment = Element.ALIGN_CENTER;
             doc.Add(cpf);
@@ -144,7 +147,7 @@ namespace Trabalho_Banco_De_Dados
                 doc.Add(Chunk.NEWLINE);
             }
 
-            table.AddCell("ID");
+            table.AddCell("Id_Veiculo");
             table.AddCell("Nome");
             table.AddCell("Modelo");
             table.AddCell("Ano");
@@ -154,7 +157,7 @@ namespace Trabalho_Banco_De_Dados
             table.AddCell("Automatico");
             table.AddCell("Valor");
 
-            table.AddCell(selectedRow.Cells["Id"].Value.ToString());
+            table.AddCell(selectedRow.Cells["Id_Veiculo"].Value.ToString());
             table.AddCell(selectedRow.Cells["Nome"].Value.ToString());
             table.AddCell(selectedRow.Cells["Modelo"].Value.ToString());
             table.AddCell(selectedRow.Cells["Ano"].Value.ToString());
