@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmveiculosadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\logincriarconta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:logincriarconta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|c:\\users\\user\\source\\repos\\trabalho-cshap\\trabalho banco de dados\\frmresultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{953E8EE3-6BB2-4499-925B-5653FBA8C467}|Trabalho Banco De Dados.csproj|solutionrelative:frmresultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 355,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +58,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmVeiculosAdicionar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs",
+              "RelativeDocumentMoniker": "FrmVeiculosAdicionar.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmVeiculosAdicionar.cs [Design]",
+              "RelativeToolTip": "FrmVeiculosAdicionar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:07:47.467Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmCliente.cs",
+              "RelativeDocumentMoniker": "frmCliente.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmCliente.cs",
+              "RelativeToolTip": "frmCliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:06:23.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\login.cs [Design]",
+              "RelativeToolTip": "login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:05:24.256Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "loginCriarConta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\loginCriarConta.cs",
+              "RelativeDocumentMoniker": "loginCriarConta.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\loginCriarConta.cs [Design]",
+              "RelativeToolTip": "loginCriarConta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:03:59.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmCliente.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\frmCliente.cs",
@@ -46,6 +115,18 @@
               "RelativeToolTip": "frmCliente.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T03:45:33.617Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmResultados.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmResultados.cs",
+              "RelativeDocumentMoniker": "FrmResultados.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Trabalho-Cshap\\Trabalho Banco De Dados\\FrmResultados.cs [Design]",
+              "RelativeToolTip": "FrmResultados.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T03:58:31.502Z",
               "EditorCaption": " [Design]"
             }
           ]

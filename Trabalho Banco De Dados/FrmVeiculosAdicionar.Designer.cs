@@ -328,8 +328,7 @@
             this.cbxSituacao.ForeColor = System.Drawing.Color.DarkBlue;
             this.cbxSituacao.FormattingEnabled = true;
             this.cbxSituacao.Items.AddRange(new object[] {
-            "À venda",
-            "Vendido"});
+            "À venda"});
             this.cbxSituacao.Location = new System.Drawing.Point(356, 272);
             this.cbxSituacao.Name = "cbxSituacao";
             this.cbxSituacao.Size = new System.Drawing.Size(84, 21);

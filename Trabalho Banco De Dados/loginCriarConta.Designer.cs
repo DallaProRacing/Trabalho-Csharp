@@ -59,10 +59,10 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSair.BackColor = System.Drawing.Color.SlateGray;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnSair.Location = new System.Drawing.Point(502, 299);
+            this.btnSair.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSair.Location = new System.Drawing.Point(403, 303);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(84, 32);
             this.btnSair.TabIndex = 25;
@@ -75,7 +75,7 @@
             this.btnSalvarUsuario.BackColor = System.Drawing.SystemColors.Control;
             this.btnSalvarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarUsuario.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnSalvarUsuario.Location = new System.Drawing.Point(403, 299);
+            this.btnSalvarUsuario.Location = new System.Drawing.Point(502, 303);
             this.btnSalvarUsuario.Name = "btnSalvarUsuario";
             this.btnSalvarUsuario.Size = new System.Drawing.Size(84, 32);
             this.btnSalvarUsuario.TabIndex = 24;
@@ -184,7 +184,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "loginCriarConta";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loginCriarConta";
             this.Load += new System.EventHandler(this.loginCriarConta_Load);
             this.panel2.ResumeLayout(false);
