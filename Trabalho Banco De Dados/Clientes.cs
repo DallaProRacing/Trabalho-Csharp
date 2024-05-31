@@ -111,8 +111,7 @@ namespace Trabalho_Banco_De_Dados
         }
 
         private void Clientes_Load(object sender, EventArgs e)
-        {
-           
+        {           
             LoadData();
         }
 

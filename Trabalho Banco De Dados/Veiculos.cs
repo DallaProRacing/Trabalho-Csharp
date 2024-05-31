@@ -167,14 +167,36 @@ namespace Trabalho_Banco_De_Dados
             frm.ShowDialog();
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var situacao = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["Situacao"].Value.ToString();
+            if (situacao == "Vendido")
+            {
+                MessageBox.Show("Este veículo não pode ser excluído pois já foi vendido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var id = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+                FrmVeiculosAdicionar frm = new FrmVeiculosAdicionar(id, true);
+                frm.ShowDialog();
+            }
+        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(dataGridView1.Rows
-                [dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
-
-            FrmVeiculosAdicionar frm = new FrmVeiculosAdicionar(id);
-            frm.ShowDialog();
+            var situacao = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["Situacao"].Value.ToString();
+            if (situacao == "Vendido")
+            {
+                MessageBox.Show("Este veículo não pode ser alterado pois já foi vendido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var id = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+                FrmVeiculosAdicionar frm = new FrmVeiculosAdicionar(id);
+                frm.ShowDialog();
+            }
         }
+
 
         private void cb_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -191,14 +213,7 @@ namespace Trabalho_Banco_De_Dados
 
         }
         
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            var id = Convert.ToInt32(dataGridView1.Rows
-                [dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
-
-            FrmVeiculosAdicionar frm = new FrmVeiculosAdicionar(id, true);
-            frm.ShowDialog();
-        }
+       
 
        
 

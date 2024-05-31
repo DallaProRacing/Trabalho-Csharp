@@ -210,6 +210,7 @@
             this.Controls.Add(this.txtNomeCli);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "frmCliente";
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);

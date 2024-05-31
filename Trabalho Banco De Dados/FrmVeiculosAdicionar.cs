@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Trabalho_Banco_De_Dados
@@ -14,17 +7,19 @@ namespace Trabalho_Banco_De_Dados
     public partial class FrmVeiculosAdicionar : Form
     {
         int id = 0;
+
         public FrmVeiculosAdicionar(int id)
         {
-            
-
             InitializeComponent();
             this.id = id;
 
-            //Alteração
+            // Alteração
             if (this.id > 0)
+            {
                 GetVeiculo(id);
+            }
         }
+
         private bool CamposObrigatoriosPreenchidos()
         {
             if (string.IsNullOrWhiteSpace(txtNome.Text) ||
@@ -35,30 +30,33 @@ namespace Trabalho_Banco_De_Dados
                 string.IsNullOrWhiteSpace(txtValor.Text) ||
                 string.IsNullOrWhiteSpace(cbxAutomatico.Text) ||
                 string.IsNullOrWhiteSpace(cbxCombustivel.Text))
-
             {
                 MessageBox.Show("Por favor, preencha todos os campos.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
         }
-        public FrmVeiculosAdicionar(int id,bool excluir)
+
+        public FrmVeiculosAdicionar(int id, bool excluir)
         {
             InitializeComponent();
             this.id = id;
 
-            //Exclusão
+            // Exclusão
             if (excluir)
+            {
                 if (this.id > 0)
                 {
                     GetVeiculo(id);
                     TravarControles();
                     btnSalvar.Visible = false;
                     btnExcluir.Visible = true;
-
                 }
                 else
+                {
                     this.Close();
+                }
+            }
         }
 
         private void TravarControles()
@@ -71,22 +69,21 @@ namespace Trabalho_Banco_De_Dados
             cbxAutomatico.Enabled = false;
             cbxCombustivel.Enabled = false;
             txtValor.Enabled = false;
+            cbxSituacao.Enabled = false;
         }
+
         private void GetVeiculo(int id)
         {
-            
             try
             {
                 using (SqlConnection cn = new SqlConnection(Conn.StrCon))
                 {
                     cn.Open();
 
-                    var sql = "Select * from tb_veiculos where id= " + id;
+                    var sql = "SELECT * FROM tb_veiculos WHERE id= " + id;
 
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
-                        
-
                         using (SqlDataReader dr = cmd.ExecuteReader())
                         {
                             if (dr.HasRows)
@@ -98,7 +95,6 @@ namespace Trabalho_Banco_De_Dados
                                     txtAno.Text = dr["Ano"].ToString();
                                     txtFabricacao.Text = dr["Fabricacao"].ToString();
                                     txtCor.Text = dr["Cor"].ToString();
-                                    
 
                                     switch (Convert.ToInt32(dr["Combustivel"]))
                                     {
@@ -115,7 +111,7 @@ namespace Trabalho_Banco_De_Dados
                                             cbxCombustivel.Text = "4 Diesel";
                                             break;
                                         case 5:
-                                            cbxCombustivel.Text = "5 Gás Natual";
+                                            cbxCombustivel.Text = "5 Gás Natural";
                                             break;
                                     }
 
@@ -126,6 +122,13 @@ namespace Trabalho_Banco_De_Dados
 
                                     txtValor.Text = dr["Valor"].ToString();
                                     cbxSituacao.Text = dr["Situacao"].ToString();
+
+                                    if (cbxSituacao.Text == "Vendido")
+                                    {
+                                        TravarControles();
+                                        MessageBox.Show("Este veículo não pode ser alterado, pois já foi vendido.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        btnSalvar.Enabled = false;
+                                    }
                                 }
                             }
                         }
@@ -134,17 +137,14 @@ namespace Trabalho_Banco_De_Dados
             }
             catch (Exception ex)
             {
-                
                 MessageBox.Show("Falha ao buscar o veículo!\n\n" + ex.Message);
             }
         }
 
-        private void SalvarVeiculo()
+        private bool SalvarVeiculo()
         {
-            
             if (CamposObrigatoriosPreenchidos())
             {
-
                 try
                 {
                     using (SqlConnection cn = new SqlConnection(Conn.StrCon))
@@ -161,8 +161,6 @@ namespace Trabalho_Banco_De_Dados
 
                         using (SqlCommand cmd = new SqlCommand(sql, cn))
                         {
-                            
-
                             cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
                             cmd.Parameters.AddWithValue("@Modelo", txtModelo.Text);
                             cmd.Parameters.AddWithValue("@Ano", txtAno.Text);
@@ -174,19 +172,18 @@ namespace Trabalho_Banco_De_Dados
                             cmd.Parameters.AddWithValue("@Situacao", cbxSituacao.Text);
                             cmd.ExecuteNonQuery();
                         }
-
-                        
-                       
                     }
+                    return true; // Indica que o salvamento foi bem-sucedido
                 }
                 catch (Exception ex)
                 {
-                    
                     MessageBox.Show("Não foi possível salvar os dados!\n\n" + ex.Message);
+                    return false; // Indica que houve um erro durante o salvamento
                 }
-
             }
+            return false; // Indica que os campos obrigatórios não foram preenchidos
         }
+
 
         private void FrmVeiculosAdicionar_Load(object sender, EventArgs e)
         {
@@ -230,54 +227,48 @@ namespace Trabalho_Banco_De_Dados
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            SalvarVeiculo();
-            this.Close();
+            if (SalvarVeiculo())
+            {
+                this.Close();
+            }
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
-
+            // Evento TextChanged do txtNome
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("Deseja Excluir?","Excluir",
+            DialogResult resp = MessageBox.Show("Deseja Excluir?", "Excluir",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(resp == DialogResult.Yes)
+            if (resp == DialogResult.Yes)
             {
-
                 ExcluirVeiculo();
                 this.Close();
             }
         }
-        
-        private void ExcluirVeiculo()
-        {            
 
+        private void ExcluirVeiculo()
+        {
             try
             {
                 using (SqlConnection cn = new SqlConnection(Conn.StrCon))
                 {
                     cn.Open();
 
-                    var sql = "DELETE FROM tb_veiculos where id=" + id;
+                    var sql = "DELETE FROM tb_veiculos WHERE id=" + id;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
-                        
-
                         cmd.ExecuteNonQuery();
                     }
-                    
                 }
-
             }
             catch (Exception ex)
             {
-                
                 MessageBox.Show("Falha ao excluir o veículo!\n\n" + ex.Message);
             }
         }
-        
     }
 }
