@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+//teste de commit
 namespace Trabalho_Banco_De_Dados
 {
     public partial class Clientes : Form
@@ -17,6 +18,7 @@ namespace Trabalho_Banco_De_Dados
         {
             if (ValidarBuscar())
                 Buscar();
+                
         }
 
         private bool ValidarBuscar()
